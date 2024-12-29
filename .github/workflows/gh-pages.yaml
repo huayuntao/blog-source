@@ -24,14 +24,14 @@ jobs:
           extended: true # 是否启用hugo extended
 
       - name: Build
-        run: hugo --minify
-        working-directory: ../blog # 注意修改成你使用hugo创建的项目名称
+        run: hugo -D
+        # working-directory: ../blog # 注意修改成你使用hugo创建的项目名称
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
         with:
-          PERSONAL_TOKEN: ${{ secrets.ACTION_TOKEN }}
-          PUBLISH_DIR: ./blog/public # 注意修改成你使用hugo创建的项目名称
+          PERSONAL_TOKEN: ${{ hugo }}
+          PUBLISH_DIR: ./public # 注意修改成你使用hugo创建的项目名称
           EXTERNAL_REPOSITORY: huayuntao/huayuntao.github.io # 你的Github Pages远程仓库名
           # PUBLISH_BRANCH: master 如果不想推送到gh-pages分支，可以添加这一行
