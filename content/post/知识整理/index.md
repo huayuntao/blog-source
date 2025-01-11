@@ -1,3 +1,12 @@
++++
+author = "Hugo Authors"
+title = "Emoji Support"
+date = "2019-03-05"
+description = "Guide to emoji usage in Hugo"
+categories = [
+    "Test"
+]
++++
 ### BERT
 
 - BERT 利用基于 Transformer 的神经网络来理解和生成类似人类的语言。BERT 采用仅编码器的架构。在原始 Transformer 架构中，既有编码器模块，也有解码器模块。在 BERT 中使用仅编码器架构的决定表明主要强调理解输入序列而不是生成输出序列。
